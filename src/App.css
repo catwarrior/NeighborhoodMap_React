@@ -1,0 +1,199 @@
+:root {
+  --blue: #c5cee4;
+  --pink: #b90a39f6;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* ************ */
+/* Nav Styling */
+/* ********** */
+
+#nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 7%;
+  max-height: 80px;
+  z-index: 1;
+}
+
+#navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 30px;
+}
+
+#navbarHeader {
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+#menu {
+  height: 5%;
+  width: 100px;
+  margin-left: 10px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#menu:hover {
+  color: #f94877;
+}
+
+/* *********************** */
+/* Main Container Styling */
+/* ********************* */
+
+#main {
+  width: 100vw;
+  height: 93%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* ************ */
+/* Map Styling */
+/* ********** */
+
+.map {
+  height: 93vh;
+  width: 100%;
+}
+
+.infowindow {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  color: var(--blue);
+  text-transform: capitalize;
+}
+
+.infoHeader {
+  font-size: 1.2em;
+}
+
+.infowindow a {
+  color: salmon;
+}
+
+/* **************** */
+/* Sidebar Styling */
+/* ************** */
+
+#sidebarContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#venueList {
+  list-style: none;
+  padding: 0.1em;
+  max-height: 100%;
+}
+
+.venueItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  margin-top: 0.2rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+  background-color: var(--blue);
+  min-width: 95%;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.venueItem:hover {
+  color: var(--pink);
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 1px 1px 5px rgb(68, 67, 67);
+  transform: scale(1.01);
+  box-shadow: 1px 1px 5px rgb(68, 67, 67);
+}
+
+input {
+  margin-left: 5px;
+}
+
+#fourLogo {
+  height: 32px;
+  width: 32px;
+  padding-left: 5px;
+}
+
+/* ************************************************ */
+/* Styling Applied to Sidebar on Menu Button Click */
+/* **********************************************
+ */
+.hidden {
+  position: relative;
+  transition: position 0.5s ease;
+  right: 500px;
+  width: 0;
+  min-width: 0;
+}
+
+.wideMap {
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* ************** */
+/* Media Queries */
+/* ************ */
+
+@media screen and (max-width: 380px) {
+  #navbarHeader {
+    font-size: 1.5rem;
+  }
+
+  .venueItem:hover {
+    font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #navbarHeader {
+    font-size: 1rem;
+  }
+}
